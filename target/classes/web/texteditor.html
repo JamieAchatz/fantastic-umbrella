@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="editor">
+    <p>Sample Text</p>
+    <p><br /></p>
+    </div>
+    <button onclick="saveContent()">Save</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script>
+    const quill = new Quill('#editor', {
+        modules: {
+
+        },
+        theme: 'snow'
+    });
+
+    function saveContent() {
+        console.log("Saving...");
+        const htmlContent = quill.root.innerHTML;
+
+        fetch("/api/save", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                content: htmlContent
+            })
+        });
+        
+    }
+
+
+    
+    </script>
+
+</body>

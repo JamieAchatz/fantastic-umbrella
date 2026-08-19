@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../app.scss"],
+  "sourcesContent": ["// This style will be bundled by the Web-Bundler and available using the {#bundle /} tag\n// for more information about how to use the {#bundle /} tag, see https://docs.quarkiverse.io/quarkus-web-bundler/dev/advanced-guides.html#bundle-tag\n\nbody {\n  margin: 0;\n  background-color: black;\n}\n"],
+  "mappings": ";AAGA;AACE,UAAA;AACA,oBAAA;;",
+  "names": []
+}
